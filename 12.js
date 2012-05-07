@@ -58,37 +58,13 @@ javascript:(function(){
                                 '<a href="#" id="quickheal" class="sexy_button_new"><span><span>QuickHeal</span></span></a> '+
                                 '<a href="#" id="propertymanager" class="sexy_button_new"><span><span>Craft</span></span></a> '+
                                 '<a href="#" id="streamscanner" class="sexy_button_new"><span><span>Stream</span></span></a> '+
- name: 'Daily Bonuses',
-        //icon : 'http://screepts.com/img/lucky.jpg',
-		resIcon: 'LuckyStash',
-        menu: function(){ return [
-                {
-                    name:'Daily Toolbar Bonus',
-                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=toolbar'},
-                    resIcon: 'stamina_menu_icon'
-                },
-                {
-                    name:'Daily Bonus Point',
-                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=point'},
-                    //resIcon : 'bonuslink'
-					icon : 'http://screepts.com/dailybonus_image.php'	
-                },
-                {
-                    name:'Daily E-Mail Bonus',
-                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=email'},
-                     resIcon : 'chromeicon'
-                },
-                {
-                    name:'Lucky Stash Spin',
-                    click: {'func':LucifersMOD.gotoURL,'params':'http://spockon.me/MWLL3SpinsLuckyStash'},
-                    resIcon: 'LuckyStash'
-                }]; 
-    
-            }
-   
-    },
-
-    {
+                                click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=toolbar'},
+                                name:'Daily Bonus Point',
+                                click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=point'},
+                                name:'Daily E-Mail Bonus',
+                                click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=email'},
+                                name:'Lucky Stash Spin',
+                                click: {'func':LucifersMOD.gotoURL,'params':'http://spockon.me/MWLL3SpinsLuckyStash'},
 				'</div>';
 			bod.find('#script_convert').remove();
 			bod.find('#appwrapper').prepend(ui);
