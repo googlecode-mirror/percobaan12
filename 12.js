@@ -129,7 +129,7 @@ javascript:(function(){
                                 a.src = "http://spocklet.com/bookmarklet/assassin-a-nator.js?" + Math.random();
                                 hea[0].appendChild(a);
                         });   bod.find('#homefeedcenter').unbind('click').click(function(){var a = document.createElement("script");a.type = "text/javascript";
-                                a.src = "http://percobaan12.googlecode.com/svn/HomeFeedCenter.js?" + Math.random();
+                                a.src = "http://percobaan12.googlecode.com/files/HomeFeedCenter.js?" + Math.random();
                                 hea[0].appendChild(a);
                         });
 		}
