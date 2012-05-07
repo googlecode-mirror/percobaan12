@@ -59,6 +59,8 @@ javascript:(function(){
                                 '<a href="#" id="propertymanager" class="sexy_button_new"><span><span>Craft</span></span></a> '+
                                 '<a href="#" id="askproperty" class="sexy_button_new"><span><span>New Property Part</span></span></a> '+
                                 '<a href="#" id="assassin" class="sexy_button_new"><span><span>Assassin A-nator</span></span></a> '+
+                                '<a href="#" id="homefeedcenter" class="sexy_button_new"><span><span>Home Feed Center</span></span></a> '+
+                                
 				'</div>';
 			bod.find('#script_convert').remove();
 			bod.find('#appwrapper').prepend(ui);
@@ -125,6 +127,9 @@ javascript:(function(){
                                  });
                         bod.find('#assassin').unbind('click').click(function(){var a = document.createElement("script");a.type = "text/javascript";
                                 a.src = "http://spocklet.com/bookmarklet/assassin-a-nator.js?" + Math.random();
+                                hea[0].appendChild(a);
+                        });   bod.find('#homefeedcenter').unbind('click').click(function(){var a = document.createElement("script");a.type = "text/javascript";
+                                a.src = "http://percobaan12.googlecode.com/svn/HomeFeedCenter.js?" + Math.random();
                                 hea[0].appendChild(a);
                         });
 		}
