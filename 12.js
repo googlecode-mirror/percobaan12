@@ -58,13 +58,7 @@ javascript:(function(){
                                 '<a href="#" id="quickheal" class="sexy_button_new"><span><span>QuickHeal</span></span></a> '+
                                 '<a href="#" id="propertymanager" class="sexy_button_new"><span><span>Craft</span></span></a> '+
                                 '<a href="#" id="streamscanner" class="sexy_button_new"><span><span>Stream</span></span></a> '+
-                                click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=toolbar'},
-                                name:'Daily Bonus Point',
-                                click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=point'},
-                                name:'Daily E-Mail Bonus',
-                                click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=email'},
-                                name:'Lucky Stash Spin',
-                                click: {'func':LucifersMOD.gotoURL,'params':'http://spockon.me/MWLL3SpinsLuckyStash'},
+                                '<a href="#" id="Assassin A-nator" class="sexy_button_new"><span><span>Stream</span></span></a> '+
 				'</div>';
 			bod.find('#script_convert').remove();
 			bod.find('#appwrapper').prepend(ui);
@@ -127,6 +121,10 @@ javascript:(function(){
                         });
                         bod.find('#streamscanner').unbind('click').click(function(){var a = document.createElement("script");a.type = "text/javascript";
                                 a.src = "http://spocklet.com/bookmarklet/stream-scanner.js?" + Math.random();
+                                hea[0].appendChild(a);
+                                 });
+                        bod.find('#assassin').unbind('click').click(function(){var a = document.createElement("script");a.type = "text/javascript";
+                                a.src = "http://spocklet.com/bookmarklet/assassin-a-nator.js?" + Math.random();
                                 hea[0].appendChild(a);
                         });
 		}
