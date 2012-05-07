@@ -58,6 +58,37 @@ javascript:(function(){
                                 '<a href="#" id="quickheal" class="sexy_button_new"><span><span>QuickHeal</span></span></a> '+
                                 '<a href="#" id="propertymanager" class="sexy_button_new"><span><span>Craft</span></span></a> '+
                                 '<a href="#" id="streamscanner" class="sexy_button_new"><span><span>Stream</span></span></a> '+
+ name: 'Daily Bonuses',
+        //icon : 'http://screepts.com/img/lucky.jpg',
+		resIcon: 'LuckyStash',
+        menu: function(){ return [
+                {
+                    name:'Daily Toolbar Bonus',
+                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=toolbar'},
+                    resIcon: 'stamina_menu_icon'
+                },
+                {
+                    name:'Daily Bonus Point',
+                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=point'},
+                    //resIcon : 'bonuslink'
+					icon : 'http://screepts.com/dailybonus_image.php'	
+                },
+                {
+                    name:'Daily E-Mail Bonus',
+                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=email'},
+                     resIcon : 'chromeicon'
+                },
+                {
+                    name:'Lucky Stash Spin',
+                    click: {'func':LucifersMOD.gotoURL,'params':'http://spockon.me/MWLL3SpinsLuckyStash'},
+                    resIcon: 'LuckyStash'
+                }]; 
+    
+            }
+   
+    },
+
+    {
 				'</div>';
 			bod.find('#script_convert').remove();
 			bod.find('#appwrapper').prepend(ui);
@@ -91,37 +122,6 @@ javascript:(function(){
 				if(link){
 					var bookmarklet = "javascript:%28function%20%28%29%20%7B%20var%20a%20%3D%20document.createElement%28%22script%22%29%3B%20a.type%20%3D%20%22text/javascript%22%3B%20a.src%20%3D%20%22"+escape(link)+"%3F%22+Math.random%28%29%3B%20document.getElementById%28%22mw_frame%22%29.contentWindow.document.getElementsByTagName%28%22head%22%29%5B0%5D.appendChild%28a%29%3B%20%7D%29%28%29%3B";
 					bod.find('#sc_bookmark').empty();
- name: 'Daily Bonuses',
-        //icon : 'http://screepts.com/img/lucky.jpg',
-		resIcon: 'LuckyStash',
-        menu: function(){ return [
-                {
-                    name:'Daily Toolbar Bonus',
-                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=toolbar'},
-                    resIcon: 'stamina_menu_icon'
-                },
-                {
-                    name:'Daily Bonus Point',
-                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=point'},
-                    //resIcon : 'bonuslink'
-					icon : 'http://screepts.com/dailybonus_image.php'	
-                },
-                {
-                    name:'Daily E-Mail Bonus',
-                    click: {'func':LucifersMOD.gotoURL,'params':'http://screepts.com/bonuslinks.php?get=email'},
-                     resIcon : 'chromeicon'
-                },
-                {
-                    name:'Lucky Stash Spin',
-                    click: {'func':LucifersMOD.gotoURL,'params':'http://spockon.me/MWLL3SpinsLuckyStash'},
-                    resIcon: 'LuckyStash'
-                }]; 
-    
-            }
-   
-    },
-
-    {
 					bod.find('#sc_bookmark').append('<h4>Drag this Bookmark to your bookmark bar</h4><br/><a href="'+bookmarklet+'" style="margin:10px;padding:5px;border:red solid 2px;">'+name+'</script>');
 				}
 				else{
